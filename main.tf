@@ -8,6 +8,10 @@ terraform {
   }
 }
 
+module "network" {
+  source = "./modules/network"
+}
+
 provider "azurerm" {
   features {}
 }
