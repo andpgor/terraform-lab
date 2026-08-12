@@ -5,20 +5,20 @@ output "resource_group_name" {
 
 output "virtual_network_name" {
   description = "Virtual Network Name"
-  value       = azurerm_virtual_network.lab.name
+  value       = module.network.virtual_network_name
 }
 
 output "virtual_network_id" {
   description = "Virtual Network ID"
-  value       = azurerm_virtual_network.lab.id
+  value       = module.network.virtual_network_id
 }
 
 output "app_subnet_id" {
   description = "Application Subnet ID"
-  value       = azurerm_subnet.app.id
+  value       = module.network.app_subnet_id
 }
 
 output "server_subnet_id" {
   description = "Server Subnet ID"
-  value       = azurerm_subnet.servers.id
+  value       = module.network.server_subnet_id
 }
